@@ -20,7 +20,6 @@ else {
     alert("Incorrect operation!");
 }
 
-
 if (!isNaN(result)) {
     alert(`Result: ${firstNumber} ${operation} ${secondNumber} = ${result}`);
 } else {
