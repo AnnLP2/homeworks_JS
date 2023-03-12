@@ -5,6 +5,7 @@ function areEqual(num1, num2) {
 console.log(areEqual(3, 8)); // false
 console.log(areEqual(4, 4)); //true
 
+
 function isSumGreaterThan10(num1, num2) {
     return num1 + num2 > 10;
 }
