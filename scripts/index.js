@@ -1,5 +1,6 @@
 'use strict';
 
+// Task #2
 let numOrStr = prompt('Input number or string');
 console.log(numOrStr);
 
