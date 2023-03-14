@@ -1,7 +1,17 @@
 'use strict';
 
+//Task #1
+const num = +prompt('Enter 1, 2 or 3');
+
+if (num !== 1 && num !== 2 && num !== 3) {
+    alert('Failure!');
+} else {
+    alert('Success!');
+}
+
+
 // Task #2
-let numOrStr = prompt('Input number or string');
+const numOrStr = prompt('Input number or string');
 console.log(numOrStr);
 
 switch(true) {
