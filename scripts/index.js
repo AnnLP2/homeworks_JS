@@ -23,14 +23,14 @@ if (userBirthYear !== null && userBirthYear !== '' && !isNaN(+userBirthYear)) {
                     message +='Классно! Ты обязательно станешь чемпионом в этом спорте!\n';
                 }
 
-                if (userCity === 'Киев') {
+                if (userCity === '') {
+                    message += 'Понимаю) Ты гражданин мира!\n';
+                } else if (userCity === 'Киев') {
                     message +='Ты живешь в столице Украины.\n';
                 } else if (userCity === 'Москва') {
                     message +='Ты живешь в столице России.\n';
                 } else if (userCity === 'Минск') {
                     message +='Ты живешь в столице Беларуси.\n';
-                } else if (userCity === '') {
-                    message += 'Понимаю) Ты гражданин мира!\n';
                 } else {
                     message +=`Ты живешь в городе ${userCity}.\n`;
                 }
