@@ -16,7 +16,7 @@ if (number % 2 === 0) {
 
 // Task #3
 const num = +prompt('Введите целое число:');
-const numDigits = num.toString().length;
+const numDigits = Math.abs(num).toString().length;
 
 let sign;
 if (num > 0) {
@@ -38,7 +38,7 @@ switch (numDigits) {
         alert(`Число ${num} трехзначное, ${sign}`);
         break;
     default:
-        alert(`Число ${num} имеет ${numDigits}, ${sign}`);
+        alert(`Число ${num} имеет ${numDigits} знака(ов), ${sign}`);
 }
 
 // Task  #4
@@ -60,5 +60,5 @@ const c = +prompt('Введите длину третьей стороны:');
 if ((a + b > c) && (b + c > a) && (a + c > b)) {
     alert(`Треугольник с длинами ${a}, ${b} и ${c} может существовать.`);
 } else {
-    alert(`Такой треугольник не существует!`);
+    alert(`Треугольник не получится :(`);
 }
