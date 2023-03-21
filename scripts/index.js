@@ -20,8 +20,8 @@ console.log(result.join(', '));
 
 // Task #3
 for (let i = 1; i <= 9; i++) {
-    const multiply = i * 7;
-    console.log(`7 * ${i} = ${multiply}`);
+    const result = i * 7;
+    console.log(`7 * ${i} = ${result}`);
 }
 
 // Task #4
