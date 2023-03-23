@@ -39,13 +39,11 @@ for (let i = 15; i <= 35; i++) {
 console.log(multiply);
 
 // Task #6
-const start = 1;
-const end = 500;
 let average = 0;
-for (let i = start; i <= end; i++) {
+for (let i = 1; i <= 500; i++) {
     average += i;
 }
-console.log(average / end);
+console.log(average / 500);
 
 // Task #7
 let sumOfEvenNumbers = 0;
