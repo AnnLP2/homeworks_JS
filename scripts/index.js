@@ -1,14 +1,13 @@
 'use strict';
 
 function fib(n = 1) {
-    let fibNumber = 0;
-    const arrOfFibonacciNumbers = [];
-    for (let i = 0; i < arrOfFibonacciNumbers.length; i ++) {
-        if (fibNumber >= 0) {
-            arrOfFibonacciNumbers.push(i);
-        }
+    const sequenceFibonacci = [0, 1];
+    for (let i = 2; i < n; i++) {
+        const fibNumber = sequenceFibonacci[i - 2] + sequenceFibonacci[i - 1];
+        sequenceFibonacci.push(fibNumber);
     }
-    console.log(arrOfFibonacciNumbers);
-
+    return sequenceFibonacci[n - 1];
 }
+
+console.log(fib(10)); // 34
 
