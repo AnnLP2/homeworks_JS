@@ -1,6 +1,6 @@
 'use strict';
 
-const num = +prompt("enter number");
+const num = +prompt("Enter the number");
 let minDivisor = num;
 if (num < 1) {
     minDivisor = NaN;
