@@ -1,10 +1,10 @@
 'use strict';
 
 const num = +prompt('Введите число');
-if (Number.isNaN(num)) {
-    alert('Invalid number');
-}
 let isPrime = true;
+if (Number.isNaN(num)) {
+    isPrime = 'Invalid number';
+}
 for (let i = 2; i < num; i++) {
     if (num % i === 0) {
         isPrime = false;
