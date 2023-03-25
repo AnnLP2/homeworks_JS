@@ -1,6 +1,5 @@
 'use strict';
 
-
 const num = +prompt('Enter the number');
 
 function isPrime(num) {
