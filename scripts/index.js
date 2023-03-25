@@ -1,15 +1,16 @@
 'use strict';
 
-const num = +prompt('Введите число');
-let isPrime = true;
-if (Number.isNaN(num)) {
-    isPrime = 'Invalid number';
-}
-for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-        isPrime = false;
-        break;
+
+const num = +prompt('Enter the number');
+
+function isPrime(num) {
+    if (typeof num !== 'number') return NaN;
+    if (num <= 1) return false;
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) return false;
     }
+    return true;
 }
 
-console.log(isPrime);
+console.log(isPrime(num));
+
