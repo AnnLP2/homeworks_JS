@@ -6,7 +6,6 @@ function fib(n = 1) {
         const fibNumber = sequenceFibonacci[i - 2] + sequenceFibonacci[i - 1];
         sequenceFibonacci.push(fibNumber);
     }
-    console.log(sequenceFibonacci)
     return sequenceFibonacci[n];
 }
 
