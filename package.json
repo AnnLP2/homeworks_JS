@@ -1,0 +1,25 @@
+{
+  "name": "homeworks_js",
+  "version": "1.0.0",
+  "description": "my_homeworks_js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnLP2/homeworks_JS.git"
+  },
+  "keywords": [
+    "homeworks"
+  ],
+  "author": "AnnLP2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnLP2/homeworks_JS/issues"
+  },
+  "homepage": "https://github.com/AnnLP2/homeworks_JS#readme",
+  "devDependencies": {
+    "eslint": "^8.36.0"
+  }
+}
