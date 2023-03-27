@@ -25,4 +25,3 @@ console.log(getMinDivisor(num));
 // }
 //
 // console.log(minDivisor);
-
