@@ -39,7 +39,7 @@ mainFunction(division);
 //Callback function modulo
 const modulo = (a, b) => {
     const result = a % b;
-    alert(`The result of the remainder of the division : ${result}`);
+    alert(`The result of the remainder of the division: ${result}`);
     return result;
 }
 
