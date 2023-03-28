@@ -33,27 +33,27 @@
 
 Ниже приведено название доп. Callback функций и то что они должны делать
 
-**Callback функция multiplay**
+**Callback функция multiply**
 
-1. Тоже смое, что и в Callback функции exponentiation
+1. Тоже самое, что и в Callback функции exponentiation
 
 2. В теле функции нам нужно умножить ( * ) первый аргумент на второй аргумент и записать результат этой операции в переменную
 
-3. Тоже смое, что и в Callback функции exponentiation
+3. Тоже самое, что и в Callback функции exponentiation
 
 **Callback функция division**
 
-1. Тоже смое, что и в Callback функции exponentiation
+1. Тоже самое, что и в Callback функции exponentiation
 
 2. В теле функции нам нужно поделить ( / ) первый аргумент на второй аргумент и записать результат этой операции в переменную
 
-3. Тоже смое, что и в Callback функции exponentiation
+3. Тоже самое, что и в Callback функции exponentiation
 
 **Callback функция modulo**
 
-1. Тоже смое, что и в Callback функции exponentiation
+1. Тоже самое, что и в Callback функции exponentiation
 
 2. В теле функции нам нужно вычислить остаток от деления ( % ) первого аргумента на второй аргумент и записать результат этой операции в переменную
 
-3. Тоже смое, что и в Callback функции exponentiation
+3. Тоже самое, что и в Callback функции exponentiation
 
