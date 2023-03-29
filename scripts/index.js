@@ -1,6 +1,4 @@
 "use strict";
-
-
 const mainFunction = (callback) => {
   const num1 = +prompt("Enter the first number");
   const num2 = +prompt("Enter the second number");
@@ -33,7 +31,6 @@ const division = (a, b) => {
 };
 
 mainFunction(division);
-
 
 //Callback function modulo
 const modulo = (a, b) => {
