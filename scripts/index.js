@@ -1,11 +1,9 @@
 'use strict';
 
-function totalCostPotatoes(borschLiters) {
-    const onePotatoWeight = 0.075;
-    const oneBorschLiter = onePotatoWeight * 4;
-    const pricePerKgPotato = 13;
+function totalCostPotatoes(borschLiters, onePotatoWeight, potatoesForLiter, pricePerKgPotato) {
+    const oneBorschLiter = onePotatoWeight * potatoesForLiter;
     const totalWeightPotatoes = Math.ceil(oneBorschLiter * borschLiters);
     return pricePerKgPotato * totalWeightPotatoes;
 }
 
-console.log(totalCostPotatoes(48));
+console.log(totalCostPotatoes(48, 0.075, 4,13 ));
