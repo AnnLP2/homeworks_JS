@@ -4,39 +4,22 @@ const mainFunction = (callback) => {
   const num2 = +prompt("Enter the second number");
   return callback(num1, num2);
 };
+const exponentiation = (a, b) => a ** b;
+const resultExpo = mainFunction(exponentiation);
 
-//Callback function exponentiation
-const exponentiation = (a, b) => {
-  const result = a ** b;
-  alert(`The result of exponentiation: ${result}`);
-  return result;
-};
+alert(`The result of exponentiation: ${resultExpo}`);
 
-mainFunction(exponentiation);
+const multiply = (a, b) => a * b;
+const resultMulti = mainFunction(multiply);
 
-//Callback function multiply
-const multiply = (a, b) => {
-  const result = a * b;
-  alert(`The result of multiply: ${result}`);
-  return result;
-};
+alert(`The result of multiply: ${resultMulti}`);
 
-mainFunction(multiply);
+const division = (a, b) => a / b;
+const resultDiv = mainFunction(division);
 
-//Callback function division
-const division = (a, b) => {
-  const result = a / b;
-  alert(`The result of division: ${result}`);
-  return result;
-};
+alert(`The result of division: ${resultDiv}`);
 
-mainFunction(division);
+const modulo = (a, b) => a % b;
+const resultMod = mainFunction(modulo);
 
-//Callback function modulo
-const modulo = (a, b) => {
-  const result = a % b;
-  alert(`The result of the remainder of the division: ${result}`);
-  return result;
-};
-
-mainFunction(modulo);
+alert(`The result of the remainder of the division: ${resultMod}`);
