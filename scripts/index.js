@@ -1,169 +1,169 @@
 "use strict";
 
 //Task #1
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const newArr = [...arr1, ...arr2];
-console.log(newArr);
+const arrPart1 = [1, 2, 3];
+const arrPart2 = [4, 5, 6];
+const combArr = [...arrPart1, ...arrPart2];
+console.log(combArr);
 
 //Task #2
-let arr = [1, 2, 3];
-arr.reverse();
-console.log(arr);
+const arr2 = [1, 2, 3];
+const revArr = arr2.reverse();
+console.log(revArr);
 
 //Task #3
-let arr = [1, 2, 3];
-arr.push(4, 5, 6);
-console.log(arr);
+const arr3 = [1, 2, 3];
+arr3.push(4, 5, 6);
+console.log(arr3);
 
 //Task #4
-let arr = [1, 2, 3];
-arr.unshift(4, 5, 6);
-console.log(arr);
+const arr4 = [1, 2, 3];
+arr4.unshift(4, 5, 6);
+console.log(arr4);
 
 //Task #5
-const arr = ["js", "css", "jq"];
-console.log(arr[0]);
+const arr5 = ["js", "css", "jq"];
+console.log(arr5[0]);
 
 //Task #6
-const arr = ["js", "css", "jq"];
-console.log(arr[arr.length - 1]);
+const arr6 = ["js", "css", "jq"];
+console.log(arr6[arr6.length - 1]);
 
 //Task #7
-const arr = [1, 2, 3, 4, 5];
-const newArr = arr.slice(0, 3);
-console.log(newArr);
+const arr7 = [1, 2, 3, 4, 5];
+const newArr7 = arr7.slice(0, 3);
+console.log(newArr7);
 
 //Task #8
-const arr = [1, 2, 3, 4, 5];
-const newArr = arr.slice(-2);
-console.log(newArr);
+const arr8 = [1, 2, 3, 4, 5];
+const newArr8 = arr8.slice(-2);
+console.log(newArr8);
 
 //Task #9
-let arr = [1, 2, 3, 4, 5];
-arr.splice(1, 2);
-console.log(arr);
+const arr9 = [1, 2, 3, 4, 5];
+arr9.splice(1, 2);
+console.log(arr9);
 
 //Task #10
-const arr = [1, 2, 3, 4, 5];
-const newArr = arr.splice(1, 3);
-console.log(newArr);
+const arr10 = [1, 2, 3, 4, 5];
+const newArr10 = arr10.splice(1, 3);
+console.log(newArr10);
 
 //Task #11
-let arr = [1, 2, 3, 4, 5];
-arr.splice(3, 0, "a", "b", "c");
-console.log(arr);
+const arr11 = [1, 2, 3, 4, 5];
+arr11.splice(3, 0, "a", "b", "c");
+console.log(arr11);
 
 //Task #12
-let arr = [1, 2, 3, 4, 5];
-arr.splice(1, 0, "a", "b");
-arr.splice(6, 0, "c");
-arr.push("e");
-console.log(arr);
+const arr12 = [1, 2, 3, 4, 5];
+arr12.splice(1, 0, "a", "b");
+arr12.splice(6, 0, "c");
+arr12.push("e");
+console.log(arr12);
 
 //Task #13
-let arr = [3, 4, 1, 2, 7];
-arr.sort();
-console.log(arr);
+const arr13 = [3, 4, 1, 2, 7];
+arr13.sort();
+console.log(arr13);
 
 // Task #14
-const arr = [5, 6, 7, 8, 9];
-let sum = 0;
-for (let i = 0; i < arr.length; i++) {
-  sum += arr[i];
-}
+const arr14 = [5, 6, 7, 8, 9];
+const sum = arr14.reduce((acc, curr) => acc + curr, 0);
 
 console.log(sum);
 
-// const arr = [5, 6, 7, 8, 9];
-// const sum = arr.reduce((acc,curr) => acc + curr, 0);
+// const arr14 = [5, 6, 7, 8, 9];
+// let sum = 0;
+// for (let i = 0; i < arr14.length; i++) {
+//   sum += arr14[i];
+// }
 //
 // console.log(sum);
 
 // Task #15
-let arr = [5, 6, 7, 8, 9];
-for (let i = 0; i < arr.length; i++) {
-  arr[i] = arr[i] ** 2;
-}
+const arr15 = [5, 6, 7, 8, 9];
+const squares = arr15.map(num => num ** 2);
 
-console.log(arr);
+console.log(squares);
 
-// const arr = [5, 6, 7, 8, 9];
-// const squares = arr.map(num => num ** 2);
+// const arr15 = [5, 6, 7, 8, 9];
+// for (let i = 0; i < arr15.length; i++) {
+//   arr15[i] = arr15[i] ** 2;
+// }
 //
-// console.log(squares);
+// console.log(arr15);
 
 // Task #16
-let arr = [1, -3, 5, 6, -7, 8, 9, -11];
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] > 0) {
-    arr.splice(i, 1);
-  }
-}
+const arr16 = [1, -3, 5, 6, -7, 8, 9, -11];
+const negativeNumbers = arr16.filter(num => num < 0);
 
-console.log(arr);
+console.log(negativeNumbers);
 
-// const arr = [1, -3, 5, 6, -7, 8, 9, -11];
-// const negativeNumbers = arr.filter(num => num < 0);
+// const arr16 = [1, -3, 5, 6, -7, 8, 9, -11];
+// for (let i = arr16.length -1; i >= 0; i--) {
+//   if (arr16[i] > 0) {
+//     arr16.splice(i, 1);
+//   }
+// }
 //
-// console.log(negativeNumbers);
+// console.log(arr16);
 
 // Task #17
-let arr = [1, -3, 5, 6, -7, 8, 9, -11];
-for (let i = arr.length - 1; i >= 0; i--) {
-  if (arr[i] % 2 !== 0) {
-    arr.splice(i, 1);
-  }
-}
+const arr17 = [1, -3, 5, 6, -7, 8, 9, -11];
+const evenNumbers = arr17.filter(num => num % 2 === 0);
 
-console.log(arr);
+console.log(evenNumbers);
 
-// const arr = [1, -3, 5, 6, -7, 8, 9, -11];
-// const evenNumbers = arr.filter(num => num % 2 === 0);
+// const arr17 = [1, -3, 5, 6, -7, 8, 9, -11];
+// for (let i = arr17.length - 1; i >= 0; i--) {
+//   if (arr17[i] % 2 !== 0) {
+//     arr17.splice(i, 1);
+//   }
+// }
 //
-// console.log(evenNumbers);
+// console.log(arr17);
 
 //Task #18
-let arr = ["aaa", "aaaqqq", "zzzqq", "zz", "qsaa", "q", "az"];
-for (let i = arr.length - 1; i >= 0; i--) {
-  if (arr[i].length <= 5) {
-    arr.splice(i, 1);
-  }
-}
+const arr18 = ["aaa", "aaaqqq", "zzzqq", "zz", "qsaa", "q", "az"];
+const newArr18 = arr18.filter(item => item.length > 5);
 
-console.log(arr);
+console.log(newArr18);
 
-// const arr = ['aaa', 'aaaqqq', 'zzzqq', 'zz', 'qsaa', 'q', 'az'];
-// const newArr = arr.filter(item => item.length > 5);
+// const arr18 = ["aaa", "aaaqqq", "zzzqq", "zz", "qsaa", "q", "az"];
+// for (let i = arr18.length - 1; i >= 0; i--) {
+//   if (arr18[i].length <= 5) {
+//     arr18.splice(i, 1);
+//   }
+// }
 //
-// console.log(newArr);
+// console.log(arr18);
 
 //Task #19
-let arr = [1, 2, [3, 4], 5, [6, 7]];
-for (let i = arr.length - 1; i >= 0; i--) {
-  if (!Array.isArray(arr[i])) {
-    arr.splice(i, 1);
-  }
-}
+const arr19 = [1, 2, [3, 4], 5, [6, 7]];
+const subArrays = arr19.filter(item => Array.isArray(item));
+console.log(subArrays);
 
-console.log(arr);
-
-// const arr = [1, 2, [3, 4], 5, [6, 7]];
-// const subArrays = arr.filter(item => Array.isArray(item));
-// console.log(subArrays);
+// const arr19 = [1, 2, [3, 4], 5, [6, 7]];
+// for (let i = arr19.length - 1; i >= 0; i--) {
+//   if (!Array.isArray(arr19[i])) {
+//     arr19.splice(i, 1);
+//   }
+// }
+//
+// console.log(arr19);
 
 //Task #20
-const arr = [5, -3, 6, -5, 0, -7, 8, 9];
-let count = 0;
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] < 0) {
-    count++;
-  }
-}
+const arr20 = [5, -3, 6, -5, 0, -7, 8, 9];
+const count = arr20.filter(num => num < 0).length;
 
 console.log(count);
 
-// const arr = [5, -3, 6, -5, 0, -7, 8, 9];
-// const count = arr.filter(num => num < 0).length;
+// const arr20 = [5, -3, 6, -5, 0, -7, 8, 9];
+// let count = 0;
+// for (let i = 0; i < arr20.length; i++) {
+//   if (arr20[i] < 0) {
+//     count++;
+//   }
+// }
 //
 // console.log(count);
