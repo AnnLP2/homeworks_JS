@@ -88,6 +88,7 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 console.log(arr);
+
 // const arr = [5, 6, 7, 8, 9];
 // const squares = arr.map(num => num ** 2);
 //
@@ -123,7 +124,6 @@ console.log(arr);
 //
 // console.log(evenNumbers);
 
-
 //Task #18
 let arr = ["aaa", "aaaqqq", "zzzqq", "zz", "qsaa", "q", "az"];
 for (let i = arr.length - 1; i >= 0; i--) {
@@ -131,6 +131,7 @@ for (let i = arr.length - 1; i >= 0; i--) {
     arr.splice(i, 1);
   }
 }
+
 console.log(arr);
 
 // const arr = ['aaa', 'aaaqqq', 'zzzqq', 'zz', 'qsaa', 'q', 'az'];
@@ -146,6 +147,7 @@ for (let i = arr.length - 1; i >= 0; i--) {
     arr.splice(i, 1);
   }
 }
+
 console.log(arr);
 
 
