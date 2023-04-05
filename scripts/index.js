@@ -22,11 +22,11 @@ arr.unshift(4, 5, 6);
 console.log(arr);
 
 //Task #5
-const arr = ['js', 'css', 'jq'];
+const arr = ["js", "css", "jq"];
 console.log(arr[0]);
 
 //Task #6
-const arr = ['js', 'css', 'jq'];
+const arr = ["js", "css", "jq"];
 console.log(arr[arr.length - 1]);
 
 //Task #7
@@ -41,24 +41,24 @@ console.log(newArr);
 
 //Task #9
 let arr = [1, 2, 3, 4, 5];
-arr.splice(1,2);
+arr.splice(1, 2);
 console.log(arr);
 
 //Task #10
 const arr = [1, 2, 3, 4, 5];
-const newArr = arr.splice(1,3);
+const newArr = arr.splice(1, 3);
 console.log(newArr);
 
 //Task #11
 let arr = [1, 2, 3, 4, 5];
-arr.splice(3, 0, 'a', 'b', 'c');
+arr.splice(3, 0, "a", "b", "c");
 console.log(arr);
 
 //Task #12
 let arr = [1, 2, 3, 4, 5];
-arr.splice(1, 0, 'a', 'b');
-arr.splice(6, 0, 'c');
-arr.push('e');
+arr.splice(1, 0, "a", "b");
+arr.splice(6, 0, "c");
+arr.push("e");
 console.log(arr);
 
 //Task #13
@@ -139,7 +139,6 @@ console.log(arr);
 //
 // console.log(newArr);
 
-
 //Task #19
 let arr = [1, 2, [3, 4], 5, [6, 7]];
 for (let i = arr.length - 1; i >= 0; i--) {
@@ -150,11 +149,9 @@ for (let i = arr.length - 1; i >= 0; i--) {
 
 console.log(arr);
 
-
 // const arr = [1, 2, [3, 4], 5, [6, 7]];
 // const subArrays = arr.filter(item => Array.isArray(item));
 // console.log(subArrays);
-
 
 //Task #20
 const arr = [5, -3, 6, -5, 0, -7, 8, 9];
