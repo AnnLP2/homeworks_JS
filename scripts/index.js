@@ -125,9 +125,9 @@ console.log(evenNumbers);
 
 //Task #18
 const arr18 = ["aaa", "aaaqqq", "zzzqq", "zz", "qsaa", "q", "az"];
-const newArr18 = arr18.filter(item => item.length > 5);
+const filteredArr = arr18.filter(item => item.length > 5);
 
-console.log(newArr18);
+console.log(filteredArr);
 
 // const arr18 = ["aaa", "aaaqqq", "zzzqq", "zz", "qsaa", "q", "az"];
 // for (let i = arr18.length - 1; i >= 0; i--) {
