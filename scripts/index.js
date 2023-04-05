@@ -66,7 +66,6 @@ let arr = [3, 4, 1, 2, 7];
 arr.sort();
 console.log(arr);
 
-
 // Task #14
 const arr = [5, 6, 7, 8, 9];
 let sum = 0;
