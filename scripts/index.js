@@ -67,8 +67,35 @@ console.log(count);// 3
 //Task #9
 const arr9 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 const reversedArr = [];
+
 for (let i = arr9.length - 1; i >= 0; i--) {
   reversedArr.push(arr9[i]);
 }
 
 console.log(reversedArr);
+
+//Task #10
+const arr10 = [[1, 2, 3], [4, 5], [6]];
+let totalSum = 0;
+
+for (let i = 0; i < arr10.length; i++) {
+  for (let j = 0; j < arr10[i].length; j++) {
+    totalSum += arr10[i][j];
+  }
+}
+
+console.log(totalSum);
+
+//Task #11
+const arr11 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
+let elementsSum = 0;
+
+for (let i = 0; i < arr11.length; i++) {
+  for (let j = 0; j < arr11[i].length; j++) {
+    for (let n = 0; n < arr11[i][j].length; n++) {
+      elementsSum += arr11[i][j][n];
+    }
+  }
+}
+
+console.log(elementsSum);
