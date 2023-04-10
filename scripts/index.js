@@ -76,26 +76,22 @@ console.log(reversedArr);
 
 //Task #10
 const arr10 = [[1, 2, 3], [4, 5], [6]];
+const flatArr10 = arr10.flat(Infinity);
 let totalSum = 0;
 
-for (let i = 0; i < arr10.length; i++) {
-  for (let j = 0; j < arr10[i].length; j++) {
-    totalSum += arr10[i][j];
-  }
+for (let i = 0; i < flatArr10.length; i++) {
+  totalSum += flatArr10[i];
 }
 
 console.log(totalSum);
 
 //Task #11
 const arr11 = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
+const flatArr11 = arr11.flat(Infinity);
 let elementsSum = 0;
 
-for (let i = 0; i < arr11.length; i++) {
-  for (let j = 0; j < arr11[i].length; j++) {
-    for (let n = 0; n < arr11[i][j].length; n++) {
-      elementsSum += arr11[i][j][n];
-    }
-  }
+for (let i = 0; i < flatArr11.length; i++) {
+  elementsSum += flatArr11[i];
 }
 
 console.log(elementsSum);
