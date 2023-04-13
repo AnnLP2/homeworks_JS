@@ -56,16 +56,16 @@ const users = [
   }
 ];
 
-const usersPhonesUp2000Balance = [];
-let totalBalance = 0;
-users.forEach(user => {
-  const balance = Number(user.balance.replace(/[$,]/g, ""));
-  if (balance > 2000) {
-    usersPhonesUp2000Balance.push(user.phone);
-  }
-  totalBalance += balance;
-});
+const toNumber = (value) => Number(value.replace(/[$,]/g, ""));
 
-console.log("Телефонные номера пользователей с балансом более 2000 долларов:", usersPhonesUp2000Balance);
-console.log("Сумма балансов всех пользователей", totalBalance.toFixed(2));
+const totalBalance = users
+  .map(user => toNumber(user.balance))
+  .reduce((acc, balance) => acc + balance)
+  .toFixed(2);
 
+const usersPhonesUp2000Balance = users
+  .filter(user => toNumber(user.balance) > 2000)
+  .map(user => user.phone);
+
+console.log(usersPhonesUp2000Balance);
+console.log(totalBalance);
