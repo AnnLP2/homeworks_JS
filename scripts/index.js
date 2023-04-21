@@ -14,7 +14,6 @@ const pow = (num, degree) => {
 
 console.log(pow(3, 4));
 
-
 // Task #3
 const sum = (a, b) => {
   if (b === 0) return a;
