@@ -16,10 +16,9 @@ const getRandom = (function() {
 })();
 
 console.log(getRandom());
-console.log(getRandom());
-console.log(getRandom());
-console.log(getRandom());
-console.log(getRandom());
+
+
+
 
 
 
