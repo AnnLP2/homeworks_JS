@@ -1,24 +1,21 @@
 "use strict";
 
-const findPalindrome = (number) => {
-  let steps = 0;
-  debugger
-  while (true) {
+const getPalindrome = (number, steps = 0) => {
+  if (number < 0) return false;
+  if (number % 10 === 0) return false;
+
+  const reversedNumber = Number(number.toString().split("").reverse().join(""));
+
+  if (isPalindrome(number)) {
+    return { result: number, steps: steps };
+  } else {
     steps++;
-    let reversedNumber = number.toString().split("").reverse().join("");
-    let sum = number + Number(reversedNumber);
-    if (isPalindrome(sum)) {
-      return { result: sum, step: steps };
-    }
-    number = sum;
+    number += reversedNumber;
+    return getPalindrome(number, steps);
   }
 };
 
-const isPalindrome = (num) => {
-  let str = num.toString();
-  if (str.length === 1) return true;
-  if (str[0] !== str[str.length - 1]) return false;
-  return isPalindrome(str.slice(1, -1));
-};
+const isPalindrome = (num) => num.toString() === num.toString().split("").reverse().join("");
 
-console.log(findPalindrome(96));
+console.log(getPalindrome(96));
+
