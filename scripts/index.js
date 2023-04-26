@@ -1,20 +1,22 @@
 "use strict";
 
 const calculator = {
-  read(a, b) {
-    if (typeof a !== "number") throw new Error("\"a\" needs to be of type number");
-    if (typeof b !== "number") throw new Error("\"b\" needs to be of type number");
-    this.a = a;
-    this.b = b;
+  read() {
+    this.a = prompt('Enter the first number');
+    this.b = prompt('Enter the second number');
+    if (isNaN(+this.a) || this.a === null || this.a.trim() === '')
+      throw new Error("Invalid number!");
+    if (isNaN(+this.b) || this.b === null || this.b.trim() === '')
+      throw new Error("Invalid number!");
   },
   sum() {
-    return this.a + this.b;
+    return Number(this.a) + Number(this.b);
   },
   mul() {
-    return this.a * this.b;
+    return Number(this.a) * Number(this.b);
   }
 };
 
-calculator.read(3, 4);
+calculator.read();
 alert(calculator.sum());
 alert(calculator.mul());
