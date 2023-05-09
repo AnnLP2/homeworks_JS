@@ -1,7 +1,6 @@
 'use strict';
 
 const createTable = () => {
-
     const table = document.createElement('table');
 
     for (let i = 1; i <= 10; i++) {
@@ -18,5 +17,3 @@ const createTable = () => {
 }
 
 createTable();
-
-
