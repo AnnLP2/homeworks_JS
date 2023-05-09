@@ -14,6 +14,6 @@ const generateList = (array) => {
     return ul;
 }
 
-const arr1 = [1, 2, [1.1, 1.2, 1.3], 3];
-const list1 = generateList(arr1);
-document.body.insertBefore(list1, document.body.firstChild);
+const arr = [1, 2, [1.1, 1.2, 1.3], 3];
+const list = generateList(arr);
+document.body.insertBefore(list, document.body.firstChild);
