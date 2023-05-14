@@ -9,11 +9,11 @@ const createTable = () => {
             const cell = document.createElement('td');
             const num = (i - 1) * 10 + j;
             cell.textContent = num.toString();
-            row.appendChild(cell);
+            row.append(cell);
         }
-        table.appendChild(row);
+        table.append(row);
     }
-    document.body.appendChild(table);
+    document.body.append(table);
 }
 
 createTable();
