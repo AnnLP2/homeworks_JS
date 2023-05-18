@@ -11,6 +11,7 @@
             data[input.name] = input.value;
         });
         console.log(data);
+
     });
 })();
 
