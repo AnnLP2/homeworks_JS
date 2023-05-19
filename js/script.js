@@ -7,11 +7,10 @@
         event.preventDefault();
         event.stopPropagation();
         const data = {};
-        const terms = form.querySelector('input.form-check-input');
-        form.querySelectorAll('input, textarea, select').forEach(input => {
-            if(!terms.checked) throw new Error("You need to agree to the terms");
+        form.querySelectorAll('input:not([type="checkbox"]), textarea, select').forEach(input => {
             data[input.name] = input.value;
         });
+        data.terms = form.querySelector('input[type="checkbox"]').checked;
         console.log(data);
     });
 })();
