@@ -3,10 +3,9 @@
 (function() {
   const form = document.querySelector("#todoForm");
   const todosContainer = document.querySelector("#todoItems");
-  const ATTR_KEY = "data-id";
-
   const titleInput = form.querySelector("input[name=title]");
   const descriptionTextarea = form.querySelector("textarea[name=description]");
+  const ATTR_KEY = "data-id";
 
   const todos = getTodos();
   todos.forEach(addTodo);
