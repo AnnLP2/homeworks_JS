@@ -24,6 +24,7 @@
   });
 
   todosContainer.addEventListener("click", (event) => {
+    event.stopPropagation();
     const removeButton = event.target.closest(".remove-todo");
     if (!removeButton) return;
 
