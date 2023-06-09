@@ -24,9 +24,9 @@
 
     Object.freeze(obj);
 
-    for (const prop in obj) {
-      if (obj.hasOwnProperty(prop)) {
-        deepFreeze(obj[prop]);
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        deepFreeze(obj[key]);
       }
     }
   };
