@@ -53,7 +53,7 @@
     localStorage.setItem(DATA_KEY, JSON.stringify(existingData));
 
     return removedItem[0];
-  };
+  }; 
 
 
   form.addEventListener("submit", (event) => {
