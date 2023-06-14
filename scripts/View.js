@@ -1,19 +1,19 @@
-'use strict';
+"use strict";
 
 const View = {
-    todoContainer: null,
+  todoContainer: null,
 
-    renderItem(data) {
-        const template = this.createTemplate(data)
-        this.todoContainer.prepend(template)
-    },
+  renderItem(data) {
+    const template = this.createTemplate(data);
+    this.todoContainer.prepend(template);
+  },
 
-    createTemplate({title, description, id}) {
-        const template = document.createElement('div')
-        template.className = 'col-4';
-        template.setAttribute('data-id', id)
+  createTemplate({ title, description, id }) {
+    const template = document.createElement("div");
+    template.className = "col-4";
+    template.setAttribute("data-id", id);
 
-        template.innerHTML = `
+    template.innerHTML = `
                         <div class="taskWrapper">
                             <div class="taskHeading">${title} <sup>${id}</sup></div>
                             <div class="taskDescription">${description}</div>
@@ -21,20 +21,21 @@ const View = {
                             <i class="bi bi-trash"></i>
                             <span>Remove</span>
                             </button>
-                        </div>`
+                        </div>`;
 
-        return template;
-    },
-
-
-    setContainer(domEl) {
-        if(!(domEl instanceof HTMLElement))  throw new Error('Block not valid HTML element');
-        this.todoContainer = domEl
-    },
+    return template;
+  },
 
 
-    init(createTemplateFunc) {
-        if(typeof createTemplateFunc !== 'function') return;
-        this.createTemplate = createTemplateFunc;
-    }
-}
+  setContainer(domEl) {
+    if (!(domEl instanceof HTMLElement)) throw new Error("Block not valid HTML element");
+    this.todoContainer = domEl;
+  },
+
+
+  init(createTemplateFunc) {
+    if (typeof createTemplateFunc !== "function") return;
+    this.createTemplate = createTemplateFunc;
+  },
+
+};

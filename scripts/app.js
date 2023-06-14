@@ -11,7 +11,8 @@
                             <div class="task__heading">${title} <sub><b>${id}</sub></b></div>
                             <div class="task__description">${description}</div>
                             <hr>
-                            <i>By Ann</i>
+                            <i>By Anna</i>
+                            <hr>
                             <button class="mt-3 remove-todo btn btn-danger btn-sm">
                             <i class="bi bi-trash"></i>
                             <span>Remove</span>
@@ -24,5 +25,6 @@
   View.init(customCreateTemplate);
   Model.init(localStorage, "todo-list-data");
   Controller.init("#todoForm", "[data-todo-items]");
+
 
 })();
