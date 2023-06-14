@@ -17,6 +17,10 @@ const View = {
                         <div class="taskWrapper">
                             <div class="taskHeading">${title} <sup>${id}</sup></div>
                             <div class="taskDescription">${description}</div>
+                            <button class="mt-3 remove-todo btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i>
+                            <span>Remove</span>
+                            </button>
                         </div>`
 
         return template;
