@@ -10,7 +10,7 @@ const Model = {
     return JSON.parse(this.storage.getItem(this.dataKey)) || [];
   },
 
-  // will get data by id from storage
+  // will get data bu id from storage
   getDataById(id) {
     return this.getData().find(item => {
       return item.id === id;
@@ -25,7 +25,15 @@ const Model = {
     this.storage.setItem(this.dataKey, JSON.stringify(savedData));
     const savedItem = this.getDataById(this.currentId);
     this.currentId += 1;
+
     return savedItem;
+
+  },
+
+  removeData(id) {
+    const savedData = this.getData();
+    const updatedData = savedData.filter((item) => item.id !== id);
+    this.storage.setItem(this.dataKey, JSON.stringify(updatedData));
   },
 
   init(storage, dataKey) {
@@ -38,5 +46,5 @@ const Model = {
     const savedData = this.getData();
     if (!savedData.length) return;
     this.currentId = savedData.at(-1).id + 1;
-  },
+  }
 };
