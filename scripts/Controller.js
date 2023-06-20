@@ -14,11 +14,11 @@ const Controller = {
   },
 
   removeTodoHandler(event) {
-    const isTargetButton = event.target.dataset['remove-button'];
+    const isTargetButton = event.target.dataset["remove-button"];
     const isTargetInsideButton = !!event.target.closest("button[data-remove-button]");
     if (!isTargetButton && !isTargetInsideButton) return;
-    const todoElement = event.target.closest('[data-id]');
-    const id = Number(todoElement.getAttribute('data-id'));
+    const todoElement = event.target.closest("[data-id]");
+    const id = Number(todoElement.getAttribute("data-id"));
     Model.removeData(id);
     todoElement.remove();
   },
@@ -38,7 +38,18 @@ const Controller = {
 
   prerenderTodos() {
     const savedData = Model.getData();
-    savedData.forEach(item => View.renderItem(item));
+    const iterator = savedData[Symbol.iterator]();
+    console.log(iterator);
+
+
+    const intervalID = setInterval(() => {
+      const todoItem = iterator.next();
+      if (todoItem.done) {
+        clearInterval(intervalID);
+      } else {
+        View.renderItem(todoItem.value);
+      }
+    }, 500);
   },
 
   init(formSelector, blockSelector) {
