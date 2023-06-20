@@ -1,3 +1,4 @@
 
-Here will be all my homeworks of the Javascript course =)
+Написать реализацию поведения arr[Symbol.iterator]() перебора элементов массива через метод next. 
+Написать функцию реализовывающую данный функционал.
 
