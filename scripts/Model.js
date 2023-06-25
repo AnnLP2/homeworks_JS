@@ -10,7 +10,7 @@ const Model = {
     return JSON.parse(this.storage.getItem(this.dataKey)) || [];
   },
 
-  // will get data bu id from storage
+  // will get data by id from storage
   getDataById(id) {
     return this.getData().find(item => {
       return item.id === id;
