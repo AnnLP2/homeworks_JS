@@ -20,7 +20,7 @@ const Controller = {
     const todoElement = event.target.closest("[data-id]");
     const id = Number(todoElement.getAttribute("data-id"));
     Model.removeData(id);
-    todoElement.remove();
+    View.removeItem(id);
   },
 
   formHandler(event) {
@@ -33,7 +33,7 @@ const Controller = {
     });
     const savedTodoItem = Model.postData(data);
     View.renderItem(savedTodoItem);
-    event.target.reset();
+    View.resetForm();
   },
 
   prerenderTodos() {

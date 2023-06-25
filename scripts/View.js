@@ -9,6 +9,16 @@ const View = {
 
   },
 
+  removeItem(id) {
+    const elementToRemove = document.querySelector(`div[data-id="${id}"]`);
+    elementToRemove.remove();
+  },
+
+  resetForm() {
+    const form = document.querySelector("#todoForm");
+    form.reset();
+  },
+
   createTemplate({ title, description, id }) {
     const template = document.createElement("div");
     template.className = "col-4";
@@ -33,7 +43,7 @@ const View = {
   },
 
   init(createTemplateFunc) {
-    if(typeof createTemplateFunc !== 'function') return;
+    if (typeof createTemplateFunc !== "function") return;
     this.createTemplate = createTemplateFunc;
   }
 };
