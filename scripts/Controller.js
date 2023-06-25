@@ -41,7 +41,6 @@ const Controller = {
     const iterator = savedData[Symbol.iterator]();
     console.log(iterator);
 
-
     const intervalID = setInterval(() => {
       const todoItem = iterator.next();
       if (todoItem.done) {
