@@ -49,16 +49,16 @@
       [true, false].includes(val)
     ).length;
     const visitedLessonsCount = this.attendance.filter((val) => val).length;
-    const avgAttendance = visitedLessonsCount / lessonsTookPlaceCount;
+    const avgAttendance = Number(visitedLessonsCount / lessonsTookPlaceCount);
 
     const marksCount = this.marks.filter((val) => typeof val === "number").length;
     const marksTotal = this.marks.reduce((acc, mark) => acc + mark);
-    const avgMark = Number(marksTotal / marksCount).toFixed(1);
+    const avgMark = Number(marksTotal / marksCount).toFixed(2);
 
     const goodAvgMark = 9;
     const goodAvgAttendance = 0.9;
 
-    if (avgMark > goodAvgMark && avgAttendance > goodAvgAttendance) {
+    if (avgMark >= goodAvgMark && avgAttendance >= goodAvgAttendance) {
       return "Ути, какой молодчинка!";
     }
     if (avgMark < goodAvgMark && avgAttendance < goodAvgAttendance) {
@@ -69,18 +69,27 @@
 
   const anna = new Student("Anna", "Polishchuk", 1990);
   anna.present();
+  anna.mark(9);
   anna.present();
+  anna.mark(8);
   anna.present();
-  anna.absent();
-  anna.absent();
   anna.present();
   anna.mark(10);
   anna.present();
+  anna.absent();
+  anna.mark(9);
   anna.present();
   anna.present();
   anna.present();
-  anna.mark(8);
+  anna.present();
+  anna.mark(10);
+  console.log();
+  console.log(anna.firstName);
+  console.log(anna.lastName);
+  const age = anna.getAge();
+  console.log(age);
   const res = anna.summary();
   console.log(res);
+  console.log(anna);
 
 })();
