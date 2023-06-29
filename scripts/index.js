@@ -2,7 +2,6 @@
 
 (function() {
   function Student(firstName, lastName, birthYear, lessonsCount = 10) {
-
     this.firstName = firstName;
     this.lastName = lastName;
     this.birthYear = birthYear;
