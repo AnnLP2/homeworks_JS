@@ -74,12 +74,12 @@
   anna.absent();
   anna.absent();
   anna.present();
-  anna.mark(4);
+  anna.mark(10);
   anna.present();
   anna.present();
   anna.present();
   anna.present();
-  anna.mark(4);
+  anna.mark(8);
   const res = anna.summary();
   console.log(res);
 
