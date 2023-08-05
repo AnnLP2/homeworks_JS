@@ -118,6 +118,7 @@ class PhoneBook {
   #searchHandler = () => {
     this.search(this.searchInput.value);
   };
+
   #removeHandler = (e) => {
     const { target: element } = e;
     e.stopPropagation();
