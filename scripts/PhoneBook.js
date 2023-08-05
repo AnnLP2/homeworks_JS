@@ -13,7 +13,6 @@ class PhoneBook {
   #searchedUsers = [];
   #modal = null;
 
-
   constructor(users, listSelector) {
     this.list = document.querySelector(listSelector);
     this.listUl = this.list.querySelector("ul");
