@@ -113,7 +113,6 @@ class PhoneBook {
     this.#modal._element.querySelector(`[${this.#ATTRS.dataEndCallBtn}]`).addEventListener("click", this.#endCall);
   }
 
-
   // your methods
 
   #searchHandler = () => {
