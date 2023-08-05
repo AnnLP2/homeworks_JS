@@ -21,11 +21,12 @@ class CallController {
   }
 
   #stateChangeHandler = (newState, oldState) => {
-    console.log(oldState, '>', newState);
+    console.log(oldState, ">", newState);
 
     if (newState === Call.callStates.reject || newState === Call.callStates.disconnect) {
       this.#addToHistory(this.currentCall);
       this.currentCall = null;
+      return;
     }
 
     if (newState === Call.callStates.inProgress) {
@@ -36,7 +37,7 @@ class CallController {
 
     }
 
-  }
+  };
 
   #addToHistory(call) {
     if (!(call instanceof Call)) return;
