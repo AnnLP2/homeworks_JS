@@ -52,21 +52,15 @@
 
   searchButton.addEventListener("click", () => {
     const postId = getPostId();
-    if (postId >= 1 && postId <= 100) {
-      fetchPost(postId)
-        .then(post => {
-          renderPost(post);
-        })
-        .catch(error => {
-          console.error(error);
-          postContainer.style.display = "none";
-          commentsContainer.innerHTML = "";
-        });
-    } else {
-      console.error("Invalid post Id");
-      postContainer.style.display = "none";
-      commentsContainer.innerHTML = "";
-    }
+    fetchPost(postId)
+      .then(post => {
+        renderPost(post);
+      })
+      .catch(error => {
+        console.error(error);
+        postContainer.style.display = "none";
+        commentsContainer.innerHTML = "";
+      });
   });
 
   commentsButton.addEventListener("click", () => {
