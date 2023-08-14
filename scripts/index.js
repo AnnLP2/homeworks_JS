@@ -1,7 +1,6 @@
 "use strict";
 
 (function() {
-
   const searchButton = document.getElementById("searchButton");
   const postIdInput = document.getElementById("postId");
   const postContainer = document.getElementById("postContainer");
@@ -9,14 +8,15 @@
   const commentsButton = document.getElementById("commentsButton");
   const commentsContainer = document.getElementById("commentsContainer");
 
-  const requestURL = "https://jsonplaceholder.typicode.com/posts/";
+  const apiDomain = "https://jsonplaceholder.typicode.com";
+  const apiPath = "/posts/";
 
   const getPostId = () => {
     return Number(postIdInput.value);
   };
 
   const fetchPost = (postId) => {
-    return fetch(`${requestURL}${postId}`)
+    return fetch(`${apiDomain}${apiPath}${postId}`)
       .then(response => {
         if (!response.ok) throw new Error("Post is not found!");
         return response.json();
@@ -24,7 +24,7 @@
   };
 
   const fetchComments = (postId) => {
-    return fetch(`${requestURL}${postId}/comments`)
+    return fetch(`${apiDomain}${apiPath}${postId}/comments`)
       .then(response => response.json());
   };
 
