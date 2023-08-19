@@ -43,7 +43,7 @@
     comments.forEach(comment => {
       const commentEl = document.createElement("div");
       commentEl.innerHTML = `
-      <h4>${comment.body}</h4>
+      <h4>${comment.name}</h4>
       <p>${comment.body}</p>
     `;
       commentsContainer.append(commentEl);
