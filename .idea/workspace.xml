@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7a443f2-a852-4ddc-922a-f150447eb7bd" name="Changes" comment="hw_76 resolved">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" />
-    </list>
+    <list default="true" id="c7a443f2-a852-4ddc-922a-f150447eb7bd" name="Changes" comment="init react project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,11 +77,11 @@
       <recent name="D:\hillel_javascript\homeworks_JS\styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\hillel_javascript\homeworks_JS" />
+      <recent name="D:\hillel_javascript\homeworks_JS\" />
       <recent name="D:\hillel_javascript\homeworks_JS\scripts\vendor" />
       <recent name="D:\hillel_javascript\homeworks_JS\scripts" />
       <recent name="D:\hillel_javascript\homeworks_JS\styles" />
-      <recent name="D:\hillel_javascript\homeworks_JS" />
-      <recent name="D:\hillel_javascript\homeworks_JS\scripts\database" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -185,21 +177,7 @@
       <workItem from="1692029570998" duration="704000" />
       <workItem from="1692435349229" duration="22403000" />
       <workItem from="1692712085305" duration="6822000" />
-      <workItem from="1692719212750" duration="1555000" />
-    </task>
-    <task id="LOCAL-00125" summary="hw_49 init">
-      <created>1684867824950</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1684867824950</updated>
-    </task>
-    <task id="LOCAL-00126" summary="hw_50 init">
-      <created>1684872287031</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1684872287031</updated>
+      <workItem from="1692719212750" duration="2136000" />
     </task>
     <task id="LOCAL-00127" summary="hw_49 resolved">
       <created>1684875945847</created>
@@ -530,7 +508,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692465103322</updated>
     </task>
-    <option name="localTasksCounter" value="174" />
+    <task id="LOCAL-00174" summary="init react project">
+      <created>1692721079219</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1692721079219</updated>
+    </task>
+    <task id="LOCAL-00175" summary="init react project">
+      <created>1692721203031</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1692721203031</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +552,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hw_36 resolved" />
     <MESSAGE value="hw_35 init" />
     <MESSAGE value="hw_37 resolved" />
     <MESSAGE value="hw_49 init" />
@@ -585,6 +576,7 @@
     <MESSAGE value="hw_74 resolved" />
     <MESSAGE value="hw_75 resolved" />
     <MESSAGE value="hw_76 resolved" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw_76 resolved" />
+    <MESSAGE value="init react project" />
+    <option name="LAST_COMMIT_MESSAGE" value="init react project" />
   </component>
 </project>
