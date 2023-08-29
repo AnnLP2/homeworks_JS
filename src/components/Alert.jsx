@@ -6,7 +6,11 @@ class Alert extends React.Component {
     const { type, text } = this.props;
     const alertClassName = `alert alert-${type}`;
 
-    return <div className={alertClassName}>{text}</div>;
+    return (
+      <div className={alertClassName} role="alert">
+        {text}
+      </div>
+    );
   }
 }
 
