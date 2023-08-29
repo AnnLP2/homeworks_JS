@@ -11,7 +11,7 @@ class Progress extends React.Component {
       <div className="progress">
         {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
         <div
-          className="progress-bar"
+          className="progress-bar progress-bar-striped progress-bar-animated"
           role="progressbar"
           style={style}
           aria-valuenow={percentage}
