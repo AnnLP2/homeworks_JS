@@ -9,8 +9,7 @@ class BtnGroup extends React.Component {
     };
   }
 
-  handleButtonClick = (event) => {
-    const button = event.target.textContent.toLowerCase();
+  handleButtonClick = (button) => {
     this.setState({ activeButton: button });
   };
 
@@ -23,7 +22,7 @@ class BtnGroup extends React.Component {
           className={classNames("btn", "btn-secondary", "left", {
             active: activeButton === "left",
           })}
-          onClick={this.handleButtonClick}
+          onClick={() => this.handleButtonClick("left")}
         >
           Left
         </button>
@@ -32,7 +31,7 @@ class BtnGroup extends React.Component {
           className={classNames("btn", "btn-secondary", "right", {
             active: activeButton === "right",
           })}
-          onClick={this.handleButtonClick}
+          onClick={() => this.handleButtonClick("right")}
         >
           Right
         </button>
