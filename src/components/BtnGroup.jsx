@@ -5,33 +5,44 @@ class BtnGroup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeButton: null,
+      isActiveLeft: false,
+      isActiveRight: false,
     };
   }
 
-  handleButtonClick = (button) => {
-    this.setState({ activeButton: button });
+  handleLeftButtonClick = () => {
+    this.setState({
+      isActiveLeft: true,
+      isActiveRight: false,
+    });
+  };
+
+  handleRightButtonClick = () => {
+    this.setState({
+      isActiveLeft: false,
+      isActiveRight: true,
+    });
   };
 
   render() {
-    const { activeButton } = this.state;
+    const { isActiveLeft, isActiveRight } = this.state;
     return (
       <div className="btn-group" role="group">
         <button
           type="button"
           className={classNames("btn", "btn-secondary", "left", {
-            active: activeButton === "left",
+            active: isActiveLeft,
           })}
-          onClick={() => this.handleButtonClick("left")}
+          onClick={this.handleLeftButtonClick}
         >
           Left
         </button>
         <button
           type="button"
           className={classNames("btn", "btn-secondary", "right", {
-            active: activeButton === "right",
+            active: isActiveRight,
           })}
-          onClick={() => this.handleButtonClick("right")}
+          onClick={this.handleRightButtonClick}
         >
           Right
         </button>
