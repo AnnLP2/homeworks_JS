@@ -24,5 +24,6 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "error",
     "react/prefer-stateless-function": "off",
+    "class-methods-use-this": "off",
   },
 };
