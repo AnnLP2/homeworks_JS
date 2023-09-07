@@ -1,5 +1,7 @@
-import React, { Component } from "react";
+import { Component } from "react";
+import { v4 as uuidv4 } from "uuid";
 import Item from "./Item";
+import Form from "./Form";
 
 class TodoBox extends Component {
   constructor(props) {
@@ -33,28 +35,23 @@ class TodoBox extends Component {
   };
 
   getUniqueId() {
-    return new Date().getTime();
+    return uuidv4();
   }
+
+  handleChange = ({ target }) => {
+    this.setState({ task: target.value });
+  };
 
   render() {
     const { task, items } = this.state;
     return (
       <div>
         <div className="mb-3">
-          <form className="d-flex" onSubmit={this.handleAddTodo}>
-            <div className="me-3">
-              <input
-                type="text"
-                value={task}
-                required=""
-                className="form-control"
-                placeholder="I am going..."
-              />
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Add
-            </button>
-          </form>
+          <Form
+            value={task}
+            onSubmit={this.handleAddTodo}
+            onChange={this.handleChange}
+          />
         </div>
         <div>
           {items.map((item) => (
@@ -69,4 +66,5 @@ class TodoBox extends Component {
     );
   }
 }
+
 export default TodoBox;
