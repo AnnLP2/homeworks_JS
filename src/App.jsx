@@ -1,9 +1,9 @@
-import Component from "./components/Component";
+import ModalComponent from "./components/ModalComponent";
 
 function App() {
   return (
     <div className="App">
-      <Component />
+      <ModalComponent />
     </div>
   );
 }
