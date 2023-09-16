@@ -1,5 +1,11 @@
+import PostCatalog from "./components/PostCatalog";
+
 function App() {
-  return <div className="App">Hello, React!</div>;
+  return (
+    <div className="App">
+      <PostCatalog />
+    </div>
+  );
 }
 
 export default App;
