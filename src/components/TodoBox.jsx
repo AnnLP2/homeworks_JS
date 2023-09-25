@@ -1,70 +1,51 @@
-import { Component } from "react";
+import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Item from "./Item";
 import Form from "./Form";
 
-class TodoBox extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      task: "",
-      items: [],
-    };
-  }
+function TodoBox() {
+  const [task, setTask] = useState("");
+  const [items, setItems] = useState([]);
+  const getUniqueId = () => uuidv4();
 
-  handleAddTodo = (e) => {
+  const handleAddTodo = (e) => {
     e.preventDefault();
-    const { task, items } = this.state;
     if (task.trim() === "") return;
 
     const newTodoItem = {
-      id: this.getUniqueId(),
+      id: getUniqueId(),
       text: task,
     };
 
-    this.setState({
-      items: [newTodoItem, ...items],
-      task: "",
-    });
+    setItems([newTodoItem, ...items]);
+    setTask("");
   };
 
-  handleRemoveTodo = (id) => {
-    const { items } = this.state;
+  const handleRemoveTodo = (id) => {
     const updatedTodoItems = items.filter((item) => item.id !== id);
-    this.setState({ items: updatedTodoItems });
+    setItems(updatedTodoItems);
   };
 
-  getUniqueId() {
-    return uuidv4();
-  }
-
-  handleChange = ({ target }) => {
-    this.setState({ task: target.value });
+  const handleChange = ({ target }) => {
+    setTask(target.value);
   };
 
-  render() {
-    const { task, items } = this.state;
-    return (
-      <div>
-        <div className="mb-3">
-          <Form
-            value={task}
-            onSubmit={this.handleAddTodo}
-            onChange={this.handleChange}
-          />
-        </div>
-        <div>
-          {items.map((item) => (
-            <Item
-              key={item.id}
-              task={item.text}
-              onRemove={() => this.handleRemoveTodo(item.id)}
-            />
-          ))}
-        </div>
+  return (
+    <div>
+      <div className="mb-3">
+        <Form value={task} onSubmit={handleAddTodo} onChange={handleChange} />
       </div>
-    );
-  }
+      <div>
+        {items.map((item) => (
+          <Item
+            key={item.id}
+            task={item.text}
+            onRemove={() => handleRemoveTodo(item.id)}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default TodoBox;
