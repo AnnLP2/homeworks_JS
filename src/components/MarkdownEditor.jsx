@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Editor from "@toast-ui/editor";
 import PropTypes from "prop-types";
 
