@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: ["airbnb", "prettier"],
-  plugins: ["prettier"],
+  plugins: ["prettier", "react-hooks"],
   overrides: [
     {
       env: {
@@ -24,5 +24,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "error",
     "react/prefer-stateless-function": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
 };
