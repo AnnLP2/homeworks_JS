@@ -17,4 +17,3 @@ const content = editor.getMarkdown();
 
 https://github.com/junjun-it-courses/react-hw/blob/master/task-15/index.jsx
 
-Посмотреть пример работы редактора можно на странице документации.
