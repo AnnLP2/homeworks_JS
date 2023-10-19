@@ -26,5 +26,8 @@ module.exports = {
     "react/prefer-stateless-function": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "arrow-body-style": ["error", "as-needed"],
+    "no-console": "off",
+    "no-param-reassign": ["error", { props: false }],
   },
 };
