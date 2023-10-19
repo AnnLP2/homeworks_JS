@@ -1,21 +1,22 @@
-Реализуйте компонент <PostCatalog />, который представляет собой вывод статей полученных из внешнего сервера
+Ваша задача, реализовать такой-же TodoList который вы увидите по
+ссылке https://vladimirshaitan.github.io/TodoListForStudents/
 
-Список постов можно получить сделав запрос на сервер —
-`const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-console.log(res.data);`
+Реализовывать на React + react-router, также можете переделать некоторые элементы на react-bootstrap.
 
-Структура на которую вы должны получить на выходе —
-<div class="posts">
-    <ul class="posts__list">
-        <li class="posts_single-post" data-post-id="Id поста">
-            <h3 class="posts__post-title">Заголовок поста</h3>
-            <p class="posts__post-description">Контент поста</p>
-        </li>
-        <li class="posts_single-post" data-post-id="Id следующего поста">
-            <h3 class="posts__post-title">Заголовок поста</h3>
-            <p class="posts__post-description">Контент поста</p>
-        </li>
-    </ul>
-</div>
+ДЗ должно быть выполнено с использование функциональных компонентов.
 
-Каждый следующий li это отдельный пост.
+Обязательно :
+
+Каждый todoItem должен иметь возможность открываться на новой страницы под своим уникальным роутом.
+Роут: todo-items/:id
+
+Все данные об элементах todo-list должны протекать через redux.
+
+Библиотеки:
+
+- eslint
+- classnames
+- redux
+- react-router
+- prop-types
+- formik
