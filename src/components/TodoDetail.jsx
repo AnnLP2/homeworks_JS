@@ -1,11 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import styles from "../styles/TodoItem.module.css";
 
 function TodoDetail() {
   const { id } = useParams();
   const todo = useSelector((state) =>
-    state.todos.list.find((item) => item.id === Number(id)),
+    state.todos.list.find((item) => item.id === id),
   );
 
   if (!todo) {
@@ -13,12 +14,11 @@ function TodoDetail() {
   }
 
   return (
-    <div className="col-8">
-      <div className="taskWrapper">
-        <div className="taskHeading">{todo.title}</div>
-        <div className="taskDescription">{todo.description}</div>
+    <div className="col-4">
+      <div className={`${styles.taskWrapper}`}>
+        <div className={`${styles.taskHeading}`}>{todo.title}</div>
+        <div className={`${styles.taskDescription}`}>{todo.description}</div>
         <hr />
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label className="completed form-check">
           <input type="checkbox" className="form-check-input" />
           <span>Завершено ?</span>

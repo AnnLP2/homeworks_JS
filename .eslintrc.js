@@ -29,5 +29,12 @@ module.exports = {
     "arrow-body-style": ["error", "as-needed"],
     "no-console": "off",
     "no-param-reassign": ["error", { props: false }],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        controlComponents: ["Field"],
+        allowChildren: true,
+      },
+    ],
   },
 };

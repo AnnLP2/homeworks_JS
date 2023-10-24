@@ -1,30 +1,21 @@
-import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React from "react";
 import { useDispatch } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
+import { Formik, Form, Field } from "formik";
 import { addTodo, removeAllTodos } from "../store/slices/todosSlice";
 
 function TodoForm() {
-  const [formData, setFormData] = useState({ title: "", description: "" });
   const dispatch = useDispatch();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (values, { resetForm }) => {
     const uniqueId = uuidv4();
     const newTodo = {
       id: uniqueId,
-      title: formData.title,
-      description: formData.description,
+      title: values.title,
+      description: values.description,
     };
     dispatch(addTodo(newTodo));
-    setFormData({ title: "", description: "" });
-  };
-  const handleReset = () => {
-    setFormData({ title: "", description: "" });
+    resetForm();
   };
 
   const handleRemoveAll = () => {
@@ -33,57 +24,61 @@ function TodoForm() {
 
   return (
     <div className="col-4">
-      <form id="todoForm" onSubmit={handleSubmit}>
-        <div className="mb-3">
-          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-          <label className="form-label">Task title</label>
-          <input
-            type="text"
-            name="title"
-            className="form-control"
-            placeholder="Title"
-            required
-            value={formData.title}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mb-3">
-          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-          <label className="form-label">Task body</label>
-          <textarea
-            name="description"
-            className="form-control"
-            placeholder="Task body"
-            cols="30"
-            rows="10"
-            required
-            value={formData.description}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="d-flex justify-content-between">
-          <div>
-            <input
-              type="submit"
-              className="btn btn-primary"
-              value="Create Task!"
-            />
-            <input
-              type="reset"
-              value="Очистить"
-              className="btn btn-warning"
-              onClick={handleReset}
+      <Formik
+        initialValues={{ title: "", description: "" }}
+        onSubmit={handleSubmit}
+      >
+        <Form id="todoForm">
+          <div className="mb-3">
+            <label className="form-label" htmlFor="title">
+              Task title
+            </label>
+            <Field
+              type="text"
+              name="title"
+              className="form-control"
+              placeholder="Title"
+              required
             />
           </div>
-          <button
-            type="button"
-            className="btn btn-danger remove-all"
-            onClick={handleRemoveAll}
-          >
-            Удалить все
-          </button>
-        </div>
-      </form>
+          <div className="mb-3">
+            <label className="form-label" htmlFor="description">
+              Task body
+            </label>
+            <Field
+              as="textarea"
+              name="description"
+              className="form-control"
+              placeholder="Task body"
+              cols="30"
+              rows="10"
+              required
+            />
+          </div>
+          <div className="d-flex justify-content-between">
+            <div>
+              <input
+                type="submit"
+                className="btn btn-primary"
+                value="Create Task!"
+                style={{ marginRight: "5px" }}
+              />
+              <input
+                type="reset"
+                value="Очистить"
+                className="btn btn-warning"
+              />
+            </div>
+            <button
+              type="button"
+              className="btn btn-danger remove-all"
+              onClick={handleRemoveAll}
+            >
+              Удалить все
+            </button>
+          </div>
+        </Form>
+      </Formik>
     </div>
   );
 }

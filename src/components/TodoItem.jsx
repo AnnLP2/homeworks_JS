@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import styles from "../styles/TodoItem.module.css";
 
 function TodoItem({ todo, onRemove }) {
   const handleRemove = () => {
@@ -7,11 +9,12 @@ function TodoItem({ todo, onRemove }) {
   };
   return (
     <div className="col-4">
-      <div className="taskWrapper">
-        <div className="taskHeading">{todo.title}</div>
-        <div className="taskDescription">{todo.description}</div>
+      <div className={`${styles.taskWrapper}`}>
+        <Link to={`/todo/${todo.id}`} className={`${styles.taskHeading}`}>
+          {todo.title}
+        </Link>
+        <div className={`${styles.taskDescription}`}>{todo.description}</div>
         <hr />
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label className="completed form-check">
           <input type="checkbox" className="form-check-input" />
           <span>Завершено ?</span>
