@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import classNames from "classnames";
 import styles from "../styles/TodoItem.module.css";
 
 function TodoDetail() {
@@ -19,8 +20,8 @@ function TodoDetail() {
         <div className={`${styles.taskHeading}`}>{todo.title}</div>
         <div className={`${styles.taskDescription}`}>{todo.description}</div>
         <hr />
-        <label className="completed form-check">
-          <input type="checkbox" className="form-check-input" />
+        <label className={classNames("completed", "form-check")}>
+          <input type="checkbox" className={classNames("form-check-input")} />
           <span>Завершено ?</span>
         </label>
         <hr />

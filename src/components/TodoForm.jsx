@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { Formik, Form, Field } from "formik";
+import classNames from "classnames";
 import { addTodo, removeAllTodos } from "../store/slices/todosSlice";
 
 function TodoForm() {
@@ -36,7 +37,7 @@ function TodoForm() {
             <Field
               type="text"
               name="title"
-              className="form-control"
+              className={classNames("form-control")}
               placeholder="Title"
               required
             />
@@ -48,7 +49,7 @@ function TodoForm() {
             <Field
               as="textarea"
               name="description"
-              className="form-control"
+              className={classNames("form-control")}
               placeholder="Task body"
               cols="30"
               rows="10"
@@ -59,19 +60,19 @@ function TodoForm() {
             <div>
               <input
                 type="submit"
-                className="btn btn-primary"
+                className={classNames("btn", "btn-primary")}
                 value="Create Task!"
                 style={{ marginRight: "5px" }}
               />
               <input
                 type="reset"
                 value="Очистить"
-                className="btn btn-warning"
+                className={classNames("btn", "btn-warning")}
               />
             </div>
             <button
               type="button"
-              className="btn btn-danger remove-all"
+              className={classNames("btn", "btn-danger", "remove-all")}
               onClick={handleRemoveAll}
             >
               Удалить все
